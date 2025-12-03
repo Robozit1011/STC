@@ -54,7 +54,7 @@ for i = 1:length(detected_signals)
     sig = detected_signals(i);
     fprintf('%d: %s, Центр=%.1f Гц, Ширина=%.1f Гц\n', i, ru_type(sig.type), sig.center_freq, sig.bandwidth);
 end
-% это для того, что бы в консоль вводился текст на русском языке
+% Для русскоязычного вывода в консоль
 function str = ru_type(type_en)
     switch lower(type_en)
         case 'narrowband'
@@ -65,3 +65,4 @@ function str = ru_type(type_en)
             str = type_en;
     end
 end
+
